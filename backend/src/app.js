@@ -4,6 +4,11 @@ const app = express() // create and express app
 
 app.use(express.json());
 
+// status
+app.get("/", (req, res) => {
+  res.send("API is running");
+});
+
 // routes import
 import userRouter from "./routes/user.route.js";
 import postRouter from "./routes/post.route.js";
