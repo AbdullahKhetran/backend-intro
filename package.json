@@ -1,0 +1,20 @@
+{
+  "name": "backend-intro",
+  "version": "1.0.0",
+  "description": "practice project for backend basics",
+  "homepage": "https://github.com/AbdullahKhetran/backend-intro#readme",
+  "bugs": {
+    "url": "https://github.com/AbdullahKhetran/backend-intro/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdullahKhetran/backend-intro.git"
+  },
+  "license": "ISC",
+  "author": "Abdullah Khetran",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
