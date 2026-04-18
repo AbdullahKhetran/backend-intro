@@ -12,7 +12,7 @@ const registerUser = async (req, res) => {
         }
 
         // check if user already exists
-        const existig = await User.findOne({email: email.toLowerCase()});
+        const existing = await User.findOne({email: email.toLowerCase()});
         if (existing) {
             return res.status(400).json({
                 message: "User already exists."
@@ -41,6 +41,47 @@ const registerUser = async (req, res) => {
     }
 }
 
+const loginUser = async (req,res) => {
+    try {
+        // check if user exists
+        const {email, password} = req.body;
+
+        const user = await User.findOne({
+            email: email.toLowerCase()
+        });
+
+        if (!user) {
+            return res.status(400).json({
+                message: "User not found"
+            });
+        };
+
+
+        // compare password
+        const isMatch = await user.comparePassword(password);
+        if(!isMatch) return res.status(400).json({
+            message: "Invalid credentials"
+
+        })
+
+        res.status(200).json({
+            message: "User logged in",
+            user: {
+                id: user._id,
+                email: user.email,
+                username: user.username
+            }          
+        })
+        
+    } catch (error) {
+        res.status(500).json({
+            message: "Internal server error"
+        })
+        
+    }
+}
+
 export {
-    registerUser
+    registerUser,
+    loginUser
 }
