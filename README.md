@@ -21,41 +21,37 @@ A practice project for learning backend development fundamentals using Node.js, 
 ### Installation
 
 1. Clone the repository
-2. Install dependencies:
+   ```
+   git clone https://github.com/AbdullahKhetran/backend-intro
+   ```
+2. Change directory
+   ```
+   cd backend-intro
+   ```
+
+3. Install dependencies:
    ```bash
    npm install
    ```
+4. Copy env file
+   ```bash
+   cp .env.example .env
+   ```
+5. Fill in environment variables in `.env`
+   ```
+   MONGODB_URI=your_mongodb_connection_string  
+   PORT=4000  
+   ```
+6. Run the application
+   - Dev mode: `npm run dev`
+   - OR
+   - Production mode: `npm start`
 
-### Environment Setup
-
-Copy the example environment file and update it with your values:
-```bash
-cp .env.example .env
-```
-Then edit the `.env` file with your MongoDB connection string and preferred port:
-```
-MONGODB_URI=your_mongodb_connection_string  
-PORT=4000  
-```
-The application loads environment variables from the `.env` file located in the root directory.
-
-### Running the Application locally
-
-#### Development Mode
-```bash
-npm run dev
-```
-Uses nodemon for automatic server restarts on file changes.
-
-#### Production Mode
-```bash
-npm start
-```
-Runs the server with Node.js directly.
-
-The server starts on the port specified in the environment variable or on port 4000.
 
 ## API Endpoints
+
+### Stauts
+- `GET /` - Check live status
 
 ### User Management
 - `POST /api/v1/users/register` - Register a new user 
