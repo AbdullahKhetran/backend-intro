@@ -4,7 +4,6 @@ A practice project for learning backend development fundamentals using Node.js, 
 
 ## Live Backend
 - Backend is [deployed](https://backend-intro-tkdv.onrender.com) using Render
-- All APIs are public and published on Postman. Try them [here](https://www.postman.com/none77-2708/backend-intro/overview)
 
 ## Tech Stack
 
