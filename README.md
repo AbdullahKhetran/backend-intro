@@ -2,6 +2,10 @@
 
 A practice project for learning backend development fundamentals using Node.js, Express, and MongoDB built by following this [tutorial](https://youtu.be/KOutPbKc9UM?si=CqHJ665Thb04y0m7) 
 
+## Live Backend
+- Backend is [deployed](https://backend-intro-tkdv.onrender.com) using Render
+- All APIs are public and published on Postman. Try them [here](https://www.postman.com/none77-2708/backend-intro/overview)
+
 ## Tech Stack
 
 - **Node.js** - JavaScript runtime environment
@@ -11,7 +15,10 @@ A practice project for learning backend development fundamentals using Node.js, 
 - **Bcrypt** - Password hashing library
 - **Dotenv** - Environment variable management 
 
-## Installation
+
+## Setup to run locally
+
+### Installation
 
 1. Clone the repository
 2. Install dependencies:
@@ -19,7 +26,7 @@ A practice project for learning backend development fundamentals using Node.js, 
    npm install
    ```
 
-## Environment Setup
+### Environment Setup
 
 Copy the example environment file and update it with your values:
 ```bash
@@ -32,15 +39,15 @@ PORT=4000
 ```
 The application loads environment variables from the `.env` file located in the root directory.
 
-## Running the Application
+### Running the Application locally
 
-### Development Mode
+#### Development Mode
 ```bash
 npm run dev
 ```
 Uses nodemon for automatic server restarts on file changes.
 
-### Production Mode
+#### Production Mode
 ```bash
 npm start
 ```
@@ -58,8 +65,8 @@ The server starts on the port specified in the environment variable or on port 4
 ### Post Management
 - `POST /api/v1/posts/create` - Create a new post 
 - `GET /api/v1/posts/getPosts` - Get all posts 
-- `PATCH /api/v1/posts/updatePost/:id` - Update a post by ID 
-- `DELETE /api/v1/posts/deletePost/:id` - Delete a post by ID 
+- `PATCH /api/v1/posts/updatePost/id` - Update a post by ID 
+- `DELETE /api/v1/posts/deletePost/id` - Delete a post by ID 
 
 ## Project Structure
 
